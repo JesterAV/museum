@@ -1,0 +1,31 @@
+[
+    {
+        "img": "/museum/assets/images/jpeg/virtual-tour-images/tourImage1.jpg",
+        "name": "Royal Palace"
+    },
+
+    {
+        "img": "/museum/assets/images/jpeg/virtual-tour-images/tourImage2.jpg",
+        "name": "Denon Wing"
+    },
+
+    {
+        "img": "/museum/assets/images/jpeg/virtual-tour-images/tourImage3.jpg",
+        "name": "Colonnade Perrault"
+    },
+
+    {
+        "img": "/museum/assets/images/jpeg/virtual-tour-images/tourImage4.jpg",
+        "name": "Greek hall"
+    },
+
+    {
+        "img": "/museum/assets/images/jpeg/virtual-tour-images/tourImage5.jpg",
+        "name": "Mona Lisa"
+    },
+
+    {
+        "img": "/museum/assets/images/jpeg/virtual-tour-images/tourImage6.jpg",
+        "name": "Night Palace"
+    }
+]
