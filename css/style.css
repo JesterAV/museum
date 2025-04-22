@@ -281,3 +281,76 @@ body {
 .tourPanorama {
     font-size: 18px;
 }
+
+.pictureExploreSection {
+    max-width: 1920px;
+    width: 100%;
+    height: 865px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #000;
+    
+}
+
+.pictureExploreContainer {
+    width: 1440px;
+    height: 715px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.pictureExploreText {
+    width: 720px;
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+.pictureExploreImageContainer {
+    width: 720px;
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.pictureExploreImage img{
+    width: 720px;
+    height: 700px;
+}
+
+.pictureExploreTitle {
+    font-family: 'Forum';
+    font-size: 70px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+
+    white-space: nowrap;
+}
+
+.pictureExploreTitleContainer {
+    width: 660px;
+    height: 115px;
+
+    border-bottom: 3px solid #710707;
+    margin-bottom: 75px;
+}
+
+.pictureExploreParagraph {
+    font-size: 22px;
+    font-family: 'Roboto';
+    font-weight: 300;
+}
