@@ -12,10 +12,18 @@ export function createPictureExplore() {
     const pictureExploreTextParagraphThree = createElement ('p', 'pictureExploreParagraph', pictureExploreTextContainer);
     const pictureExploreImage = createElement('img', 'pictureExploreImage', pictureExploreImageContainer);
 
+    const yellowVeil = document.createElement('span');
+    yellowVeil.textContent = '"yellow veil"';
+    yellowVeil.style.color = '#9D8665';
+
     pictureExploreImage.src = '/museum/assets/images/png/picture-explore.png';
     pictureExploreTitle.textContent = 'Picture explore';
     pictureExploreTextParagraphOne.textContent = 'Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.';
-    pictureExploreTextParagraphTwo.textContent = 'It was cleaned in 1984 to remove a "yellow veil" of dust that had gathered since the previous restoration in the 19th century.';
+    
+    pictureExploreTextParagraphTwo.textContent = 'It was cleaned in 1984 to remove a ';
+    pictureExploreTextParagraphTwo.innerHTML += '<span style = "color: #9D8665;"> "yellow veil" </span>';
+    pictureExploreTextParagraphTwo.innerHTML += ' of dust that had gathered since the previous restoration in the 19th century.';
+   
     pictureExploreTextParagraphThree.textContent = 'The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.';
 
 }
