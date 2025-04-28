@@ -251,6 +251,13 @@ body {
 
     margin: 0;
     padding: 0;
+
+    transition: 0.5s ease;
+}
+
+.virtualCard:hover {
+    cursor: pointer;
+    opacity: 0.5;
 }
 
 .virtualCardImage {
