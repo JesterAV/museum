@@ -2,6 +2,8 @@ import { createElement } from "../utils/utils.mjs";
 
 export function createBuyTicketsSection() {
     const ticketsSection = createElement('div', 'ticketsSection', document.body);
+    ticketsSection.id = 'Tickets';
+
     const ticketsSectionContainer = createElement('div', 'ticketsContainer', ticketsSection);
     const ticketsTitleContainer = createElement('div', 'ticketsTitleContainer', ticketsSectionContainer);
     const ticketsTitle = createElement('span', 'ticketsTitle', ticketsTitleContainer).textContent = 'Buy tickets';

@@ -2,6 +2,7 @@ import { createElement } from "../utils/utils.mjs";
 
 export function createVideoJourneySection() {
     const videoSection = createElement('div', 'videoSection', document.body);
+    videoSection.id = 'Video';
     const videoContainer = createElement('div', 'videoContainer', videoSection)
     const videoJourney = createElement('iframe', 'videoJourney', videoContainer);
     videoJourney.src = 'https://www.youtube.com/embed/zp1BXPX8jcU'; 

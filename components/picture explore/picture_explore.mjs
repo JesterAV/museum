@@ -2,6 +2,8 @@ import { createElement } from "../utils/utils.mjs";
 
 export function createPictureExplore() {
     const pictureExploreSection = createElement('div', 'pictureExploreSection', document.body);
+    pictureExploreSection.id = 'Explore';
+
     const pictureExploreContainer = createElement('div', 'pictureExploreContainer', pictureExploreSection);
     const pictureExploreTextContainer = createElement('div', 'pictureExploreText', pictureExploreContainer);
     const pictureExploreImageContainer = createElement('div', 'pictureExploreImageContainer', pictureExploreContainer);

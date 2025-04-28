@@ -15,7 +15,9 @@ export function createHeader(main) {
 
         for (let i = 0; i < listParagraphs.length; i++ ) {
             const listParagraph = createElement('li', 'listParagraph', haderList);
-            listParagraph.textContent = listParagraphs[i];
+            const listParagraphLink = createElement('a', 'listParagraphLink', listParagraph);
+            listParagraphLink.href = `#${listParagraphs[i]}`;
+            listParagraphLink.textContent = listParagraphs[i];
         }
 
         logoImage.src = '/museum/assets/images/png/Vector.png';

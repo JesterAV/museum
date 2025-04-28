@@ -5,6 +5,7 @@ import { createMap } from "../utils/utils.mjs";
 export function createContactsSection() {
 
     const contactsSrction = createElement('div', 'contactsSection', document.body);
+    contactsSrction.id = 'Contacts';
     const contactsContainer = createElement('div', 'contactsContainer', contactsSrction);
 
     const contactsTitleContainer = createElement('div', 'contactsTitleContainer', contactsContainer);

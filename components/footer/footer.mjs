@@ -23,7 +23,9 @@ export function createFooter() {
     for (let i = 0; i < footerNavigationList.length; i++) {
         if (i <= (footerNavigationList.length / 2) -1) {
             const listParagrapgh = createElement('li', 'footerListParagraph', firstList);
-            listParagrapgh.textContent = footerNavigationList[i];
+            const listParagrapghLink = createElement('a', 'listParagrapghLink', listParagrapgh)
+            listParagrapghLink.textContent = footerNavigationList[i];
+            listParagrapghLink.href = `#${footerNavigationList[i]}`;
         } else {
             const listParagrapgh = createElement('li', 'footerListParagraph', secondList);
             listParagrapgh.textContent = footerNavigationList[i]; 

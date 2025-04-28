@@ -4,6 +4,8 @@ import { RoyalPalaceLink, DenonWingLink, ColonnadePerraultLink, GreekHallLink, M
 
 export function createVirtualTourSection() {
     const virtualTour = createElement('div', 'virtualTourSection', document.body);
+    virtualTour.id = 'Visiting';
+
     const virtualTourContainer = createElement('div', 'virtualTourContainer', virtualTour);
     const virtualTourTitleContainer = createElement('div', 'virtualTourTitleContainer', virtualTourContainer);
     const virtualTourTitle = createElement('span', 'virtualTourTitle', virtualTourTitleContainer);

@@ -5,6 +5,7 @@ import { openWindow } from "../utils/utils.mjs";
 
 export function createMain() {
     const main = createElement('div', 'main', document.body);
+    main.id = 'Welcome';
     createHeader(main);
     const mainContainer = createElement('div', 'mainContaier', main);
 
