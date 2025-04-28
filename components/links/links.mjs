@@ -8,3 +8,11 @@ export const ColonnadePerraultLink = 'https://www.google.com/maps/@48.8601723,2.
 export const GreekHallLink = 'https://www.google.com/maps/@48.860183,2.3356156,3a,90y,177.69h,95.61t/data=!3m7!1e1!3m5!1sAF1QipP7uFZnTITRe-7AEVAgHAfqiCL-03gvBHcYWgF3!2e10!3e12!7i5472!8i2736';
 export const MonaLisaLink = 'https://www.google.com/maps/@48.8598788,2.3355157,3a,82.2y,7.53h,94t/data=!3m7!1e1!3m5!1sAF1QipO1wkUUbyzpPjj-OR0mR5etZJT-xl-40XK8rDQ3!2e10!3e12!7i10240!8i5120';
 export const NightPalaceLink = 'https://www.google.com/maps/@48.8563254,2.3352706,3a,90y,21.26h,79.91t/data=!3m7!1e1!3m5!1sAF1QipPpGAowYatVyk3MMGnZAaQkYm2EUk-Dlca06SS5!2e10!3e12!7i11304!8i5652';
+
+/// Footer Links
+
+export const youtubeLink = 'https://www.youtube.com/user/louvre';
+export const instagramLink = 'https://www.instagram.com/museelouvre/';
+export const facebookLink = 'https://www.facebook.com/museedulouvre';
+export const twitterLink = 'http://twitter.com/museelouvre';
+export const pinterestLink = 'https://www.pinterest.fr/museedulouvre/';

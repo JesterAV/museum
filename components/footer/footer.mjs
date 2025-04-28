@@ -1,4 +1,5 @@
 import { createElement } from "../utils/utils.mjs";
+import { youtubeLink, instagramLink, facebookLink, twitterLink, pinterestLink } from "../links/links.mjs";
 
 export function createFooter() {
     const footer = createElement('footer', 'footer', document.body);
@@ -42,9 +43,20 @@ export function createFooter() {
         '/museum/assets/images/svg/pinterest.svg'
     ]
 
+    const iconsLinksList = [
+        youtubeLink,
+        instagramLink,
+        facebookLink,
+        twitterLink,
+        pinterestLink
+    ]
+
     for (let p = 0; p < iconsList.length; p++) {
-        const iconButton = createElement('div', 'iconButton', iconsContainer)
+        const iconLink = createElement('a', 'iconLink', iconsContainer)
+        const iconButton = createElement('div', 'iconButton', iconLink)
         const icon = createElement('img', 'socialIcons', iconButton);
         icon.src = iconsList[p];
+        iconLink.href = iconsLinksList[p];
+        iconLink.target = '_blank';
     }
 }
