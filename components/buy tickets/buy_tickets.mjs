@@ -15,8 +15,22 @@ export function createBuyTicketsSection() {
     const types = ['Permanent exhibition', 'Temporary exhibition', 'Combined Admission'];
     const typesList = createElement('ul', 'typesList', ticketTypeContainer);
     
+    let activeCounter = 0;
     for (let i = 0; i < types.length; i++) {
-        const type = createElement('li', 'typeListParagraph', typesList).textContent = types[i];
+        const type = createElement('li', 'typeListParagraph', typesList);
+        const typeName = createElement('span', 'typeName', type).textContent = types[i];
+
+        type.addEventListener('click', () => {
+            const allTypes = document.querySelectorAll('.typeListParagraph');
+            allTypes.forEach(item => item.classList.remove('active'));
+
+            type.classList.add('active');
+        })
+
+        if (activeCounter === 0) {
+            type.classList.add('active');
+            activeCounter++;
+        }
     }
 
     const amountContainer = createElement('div', 'amountContainer', buyMenu);
@@ -69,5 +83,4 @@ export function createBuyTicketsSection() {
     });
 
     
-
 }

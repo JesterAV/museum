@@ -563,8 +563,30 @@ body {
     list-style: none;
 }
 
-.typeListParagraph::marker {
+.typeListParagraph {
     content: '○';
+}
+
+.typeListParagraph::before {
+    content: '○';
+    transition: 0.3 ease;
+}
+
+.typeListParagraph:hover::before {
+    content: '◉';
+    cursor: pointer;
+}
+
+.typeListParagraph.active::before {
+    content: '◉';
+}
+
+.typeName {
+    margin-left: 10px;
+}
+
+.typeName:hover {
+    cursor: pointer;
 }
 
 .contactsSection {
