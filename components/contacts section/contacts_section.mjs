@@ -15,9 +15,9 @@ export function createContactsSection() {
     const infoContainerTitle = createElement('h2', 'infoContainerTitle', contactsInfoContainer);
     
     const contacts = [
-        'address:75001 Paris, France',
-        'phone:+33(0) 1 40 20 50 50',
-        'mail:info@louvre.fr'
+        'address: 75001 Paris, France',
+        'phone: +33(0) 1 40 20 50 50',
+        'mail: info@louvre.fr'
     ];
 
     for (let i = 0; i < contacts.length; i++) {
@@ -31,5 +31,5 @@ export function createContactsSection() {
     const mapContainer = createElement('div', 'mapContainer', contactsContainerTwo);
     mapContainer.id = 'map';
 
-    createMap(apiMap)
+    createMap(apiMap);
 }

@@ -4,6 +4,7 @@ import { createPictureExplore } from "./components/picture explore/picture_explo
 import { createVideoJourneySection } from "./components/video journey/video_journey.mjs";
 import { createBuyTicketsSection } from "./components/buy tickets/buy_tickets.mjs";
 import { createContactsSection } from "./components/contacts section/contacts_section.mjs";
+import { createFooter } from "./components/footer/footer.mjs";
 
 createMain();
 createVirtualTourSection();
@@ -11,3 +12,4 @@ createPictureExplore();
 createVideoJourneySection();
 createBuyTicketsSection();
 createContactsSection();
+createFooter();
