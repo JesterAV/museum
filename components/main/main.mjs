@@ -1,5 +1,7 @@
 import { createElement } from "../utils/utils.mjs";
 import { createHeader } from "../header/header.mjs";
+import { mainSectionLink } from "../links/links.mjs";
+import { openWindow } from "../utils/utils.mjs";
 
 export function createMain() {
     const main = createElement('div', 'main', document.body);
@@ -10,7 +12,11 @@ export function createMain() {
     const welcome = createElement('span', 'welcome', mainTitleContainer);
     const mainTitleText = createElement('h1', 'mainTitleText', mainTitleContainer);
     const mainSubTitle = createElement('span', 'mainSubTitle', mainTitleContainer);
-    const mainBtn = createElement('button', 'mainBtn', mainTitleContainer);
+    const mainBtnLink = createElement('a', 'mainBtnLink', mainTitleContainer);
+    mainBtnLink.addEventListener('click', () => {
+        openWindow(mainSectionLink);
+    })
+    const mainBtn = createElement('button', 'mainBtn', mainBtnLink);
 
     welcome.textContent = 'welcome';
     mainTitleText.textContent = 'to the Louvre';

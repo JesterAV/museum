@@ -145,6 +145,14 @@ body {
     background-color: #710707;
 
     border: none;
+
+    transition: 0.5s ease;
+}
+
+.mainBtn:hover {
+    cursor: pointer;
+    background-color: #FFFFFF;
+    color: #710707;
 }
 
 .welcome,

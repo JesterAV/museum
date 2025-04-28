@@ -30,3 +30,13 @@ export function createMap(api) {
         .addTo(map)
     })
 }
+
+export function openWindow(url) {
+    let width = window.innerWidth * 0.8;
+    let height = window.innerHeight * 0.8;
+
+    const left = (screen.width / 2) - (width / 2);
+    const top = (screen.height / 2) - (height / 2);
+
+    window.open(url, 'popop', 'width=' + width + ',height=' + height + ',top=' + top + ',left=' + left);
+}

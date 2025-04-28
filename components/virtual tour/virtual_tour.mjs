@@ -1,4 +1,6 @@
 import { createElement } from "../utils/utils.mjs";
+import { openWindow } from "../utils/utils.mjs";
+import { RoyalPalaceLink, DenonWingLink, ColonnadePerraultLink, GreekHallLink, MonaLisaLink, NightPalaceLink } from "../links/links.mjs";
 
 export function createVirtualTourSection() {
     const virtualTour = createElement('div', 'virtualTourSection', document.body);
@@ -11,6 +13,8 @@ export function createVirtualTourSection() {
 
     let cardImage = [];
     let cardName = [];
+
+    const cardsUrlList = [RoyalPalaceLink, DenonWingLink, ColonnadePerraultLink, GreekHallLink, MonaLisaLink, NightPalaceLink];
 
     function createCards() {
         fetch('/museum/tourImages.json')
@@ -33,6 +37,10 @@ export function createVirtualTourSection() {
 
                 virtualCardImage.src = cardImage[i];
                 virtualCardName.textContent = cardName[i];
+
+                virtualTourCard.addEventListener('click', () => {
+                    openWindow(cardsUrlList[i]);
+                });
             };
         });
     };
