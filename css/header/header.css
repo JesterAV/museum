@@ -1,0 +1,69 @@
+.header {
+    width: 100%;
+    height: 200px;
+
+    background-color: inherit;
+    position: absolute;
+    top: 0;
+    
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerContainer {
+    max-width: 1370px;
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 195px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo img {
+    width: 49px;
+    height: 26px;
+}
+
+.logoText {
+    font-family: 'Forum';
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.headerList {
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 76px;
+}
+
+.listParagraph {
+    font-family: 'Roboto';
+    font-size: 22px;
+    font-weight: 200;
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.listParagraph:hover {
+    color: #710707;
+}

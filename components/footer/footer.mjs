@@ -59,4 +59,18 @@ export function createFooter() {
         iconLink.href = iconsLinksList[p];
         iconLink.target = '_blank';
     }
+
+    const footerLine = createElement('div', 'footerLine', footer);
+    const lastString = createElement('div', 'lastString', footer);
+    
+    const lastStringList = [
+        '© 2021',
+        'The Rolling Scopes School',
+        'JesterAV'
+    ]
+
+    for (let s = 0; s < lastStringList.length; s++) {
+        const listWord = createElement('span', 'listWord', lastString);
+        listWord.textContent = lastStringList[s];
+    }
 }

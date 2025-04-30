@@ -1,0 +1,105 @@
+.main {
+    max-width: 1920px;
+    width: 100%;
+    height: 950px;
+
+    background-color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+}
+
+.mainContainer {
+    display: flex;
+    align-items: center;
+}
+
+.mainTitleContainer {
+    width: 598px;
+    height: 390px;
+
+    position: absolute;
+    left: 240px;
+
+    margin-top: -114px;
+
+    z-index: 1;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.mainImage{
+    width: 1250px;
+    height: 100%;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    background-image: url(/museum/assets/images/jpeg/main-image/background.jpg);
+}
+
+.mainBtn {
+    width: 360px;
+    height: 75px;
+
+    color: #FFFFFF;
+    border-radius: 10px;
+
+    font-family: 'Roboto';
+    font-size: 22px;
+    font-weight: 200px;
+    letter-spacing: 2px;
+
+    text-align: center;
+
+    background-color: #710707;
+
+    border: none;
+
+    transition: 0.5s ease;
+}
+
+.mainBtn:hover {
+    cursor: pointer;
+    background-color: #9D8665;
+    color: #fff;
+}
+
+.welcome,
+.mainTitleText {
+    font-family: 'Forum';
+    font-size: 80px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+    margin: 0;
+    padding: 0;
+}
+
+.mainTitleText {
+    margin-bottom: 26px;
+}
+
+.mainSubTitle {
+    font-family: 'Roboto';
+    font-size: 28px;
+    font-weight: 300px;
+    letter-spacing: 2px;
+
+    margin-bottom: 76px;
+}

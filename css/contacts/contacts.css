@@ -1,0 +1,72 @@
+.contactsSection {
+    max-width: 1920px;
+    width: 100%;
+    height: 963px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactsContainer {
+    width: 1440px;
+    height: 813px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 75px;
+}
+
+.contactsTitleContainer{
+    width: 100%;
+    height: 115px;
+
+    border-bottom: 3px solid #710707;
+}
+
+.contactsTitle {
+    font-size: 70px;
+    font-weight: 400;
+    font-family: 'Forum';
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    color: #9D8665;
+}
+
+.contactsContainerTwo {
+    width: 100%;
+    height: 620px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contactsInfoContainer {
+    width: 282px;
+    height: 221px;
+}
+
+.infoContainerTitle {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 28px;
+
+    color: #000;
+    margin-bottom: 36px;
+}
+
+.contact {
+    font-family: 'Roboto';
+    font-size: 22px;
+    font-weight: 300;
+
+    color: #000;
+}
+
+.mapContainer {
+    width: 960px;
+    height: 620px;
+}

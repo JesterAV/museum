@@ -1,0 +1,114 @@
+.virtualTourSection {
+    max-width: 1920px;
+    width: 100%;
+    height: 1265px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: black;
+}
+
+.virtualTourContainer {
+    width: 1440px;
+    height: 1115px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 75px;
+}
+
+.virtualTourTitleContainer {
+    border-bottom: 3px solid #710707;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 115px;
+
+    position: relative;
+}
+
+.virtualTourTitle {
+    font-family: 'Forum';
+    font-size: 80px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    color: #9D8665;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.virtualTourCards {
+    width: 1440px;
+    height: 1115px;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.virtualCard {
+    max-width: 440px;
+    width: 440px;
+    height: 422px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin: 0;
+    padding: 0;
+
+    transition: 0.5s ease;
+}
+
+.virtualCard:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.virtualCardImage {
+    width: 440px;
+    height: 285px;
+}
+
+.virtualCardName {
+    font-family: 'Forum';
+    font-size: 32px;
+    font-weight: 400;
+
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+    margin: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    border-bottom: 2px solid #710707;
+
+    margin-bottom: 9px;
+}
+
+.virtualTour360,
+.tourPanorama {
+    font-family: 'Roboto';
+    font-size: 22px;
+    font-weight: 200;
+
+    margin: 0;
+    padding: 0;
+}
+
+.tourPanorama {
+    font-size: 18px;
+}

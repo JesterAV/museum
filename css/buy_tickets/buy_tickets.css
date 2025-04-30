@@ -1,0 +1,177 @@
+.ticketsSection {
+    max-width: 1920px;
+    width: 100%;
+    height: 893px;
+
+    background-color: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ticketsContainer {
+    width: 1440px;
+    height: 743px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 75px;
+}
+
+.ticketsTitleContainer {
+    width: 100%;
+    height: 115px;
+
+    border-bottom: 3px solid #710707;
+}
+
+.ticketsTitle {
+    font-size: 70px;
+    font-weight: 400;
+    font-family: 'Forum';
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.ticketsContainers {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ticketsContainerImage {
+    width: 720px;
+    height: 550px;
+}
+
+.buyMenu {
+    display: flex;
+    justify-content: space-between;
+
+    width: 660px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.listName,
+.amountName,
+.totalSum {
+    font-family: 'Roboto';
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.ticketTypeContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 50px;
+}
+
+.typeListParagraph {
+    margin-bottom: 50px;
+
+    font-size: 22px;
+    font-family: 'Roboto';
+    font-weight: 300;
+}
+
+.amountContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+
+    gap: 14px; 
+}
+
+.ageName {
+    font-size: 22px;
+    font-family: 'Roboto';
+    font-weight: 300;
+}
+
+.ageCounterContainer {
+    width: 150px;
+    height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 3px solid #fff;
+
+    margin-bottom: 35px;
+}
+
+.inputCount {
+    width: 38px;
+    height: 38px;
+
+    background-color: inherit;
+    border: none;
+
+    font-size: 22px;
+    font-family: 'Roboto';
+    font-weight: 300;
+    
+    color: #fff;
+
+    text-align: center;
+    outline: none;
+}
+
+.counterBtn {
+    width: 40px;
+
+    background-color: inherit;
+
+    font-size: 32px;
+    font-weight: 400;
+    font-family: 'Roboto';
+
+    border: none;
+
+    color: #fff;
+}
+
+.counterBtn:hover {
+    cursor: pointer;
+}
+
+.secondCounterContainer {
+    margin-bottom: 50px;
+}
+
+.typesList {
+    list-style: none;
+}
+
+.typeListParagraph {
+    content: '○';
+}
+
+.typeListParagraph::before {
+    content: '○';
+    transition: 0.3 ease;
+}
+
+.typeListParagraph:hover::before {
+    content: '◉';
+    cursor: pointer;
+}
+
+.typeListParagraph.active::before {
+    content: '◉';
+}
+
+.typeName {
+    margin-left: 10px;
+}
+
+.typeName:hover {
+    cursor: pointer;
+}
