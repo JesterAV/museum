@@ -36,18 +36,18 @@
 }
 
 .mainImage{
-    width: 1250px;
-    height: 100%;
+    width: 1000px;
+    height: 750px;
 
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: 240px;
+    bottom: 50px;
 
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 
-    background-image: url(/museum/assets/images/jpeg/main-image/background.jpg);
+    overflow: hidden;
 }
 
 .mainBtn {
@@ -102,4 +102,84 @@
     letter-spacing: 2px;
 
     margin-bottom: 76px;
+}
+
+.mainSlider {
+    width: 5000px;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: 0.5s ease;
+}
+
+.sliderImage {
+    width: 1000px;
+    height: 100%;
+}
+
+.blurElement {
+    width: 50px;
+}
+
+.sliderButtonsContainer {
+    width: 600px;
+    height: 120px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 60px;
+
+    position: absolute;
+    bottom: 0;
+    right: 240px;
+
+    z-index: 3;
+
+    background-color: #000;
+
+    padding: 0 75px;
+}
+
+.arrowButton {
+    color: white;
+    font-size: 30px;
+
+    background-color: #000;
+    border: none;
+}
+
+.arrowButton:hover {
+    cursor: pointer;
+}
+
+.squareContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.square {
+    width: 16px;
+    height: 16px;
+
+    background-color: #fff;
+    transition: 0.3s ease;
+}
+
+.square.active {
+    background-color: #9D8665;
+}
+
+.imageCounter {
+    font-size: 22px;
+    font-family: 'Roboto';
+    font-weight: 400px;
 }
