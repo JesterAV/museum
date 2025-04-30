@@ -28,4 +28,50 @@ export function createPictureExplore() {
    
     pictureExploreTextParagraphThree.textContent = 'The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.';
 
+    const sliderContainer = createElement('div', 'sliderContainer', pictureExploreImageContainer);
+    const sliderStripeOne = createElement('div', 'sliderStripeOne', sliderContainer);
+    const sliderCircle = createElement('div', 'sliderCircle', sliderContainer);
+    const sliderStripeTwo = createElement('div', 'sliderStripeTwo', sliderContainer);
+
+    let isDragging = false;
+    let startX;
+    let origX;
+
+    sliderContainer.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        startX = e.clientX;
+
+        const rect = sliderContainer.getBoundingClientRect();
+        origX = rect.left;
+
+        sliderContainer.classList.add('move');
+        e.preventDefault();
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+
+        const dx = e.clientX - startX;
+
+        const containerRect = pictureExploreImageContainer.getBoundingClientRect();
+        const sliderWidth = sliderContainer.offsetWidth;
+
+        let newLeft = origX + dx;
+
+        if (newLeft < containerRect.left) {
+            newLeft = containerRect.left; 
+        } else if (newLeft + sliderWidth > containerRect.right) {
+            newLeft = containerRect.right - sliderWidth; 
+        }
+
+        sliderContainer.style.left = newLeft - containerRect.left + 'px'; 
+    });
+
+    document.addEventListener('mouseup', () => {
+        if (isDragging) {
+            isDragging = false;
+            sliderContainer.classList.remove('move');
+        }
+    });
+
 }
