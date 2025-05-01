@@ -2,6 +2,8 @@ import { createElement, shuffleArray } from "../utils/utils.mjs";
 
 export function createAptGallery() {
     const gallerySection = createElement('div', 'aptGallery', document.body);
+    gallerySection.id = 'Gallery';
+
     const galleryContainer = createElement('div', 'galleryContainer', gallerySection);
 
     const galleryContainerTitle = createElement('span', 'galleryContainerTitle', galleryContainer).textContent = 'Art Gallery';

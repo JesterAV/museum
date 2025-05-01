@@ -11,7 +11,7 @@ export function createHeader(main) {
         const logoText = createElement('span', 'logoText', logo);
 
         const haderList = createElement('ul', 'headerList', headerContainer);
-        const listParagraphs = ['Visiting', 'Explore', 'Video', 'Tickets', 'Contacts'];
+        const listParagraphs = ['Visiting', 'Explore', 'Video', 'Gallery', 'Tickets', 'Contacts'];
 
         for (let i = 0; i < listParagraphs.length; i++ ) {
             const listParagraph = createElement('li', 'listParagraph', haderList);
