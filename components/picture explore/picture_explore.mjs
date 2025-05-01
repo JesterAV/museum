@@ -65,6 +65,19 @@ export function createPictureExplore() {
         }
 
         sliderContainer.style.left = newLeft - containerRect.left + 'px'; 
+
+        const sliderPosition = newLeft - containerRect.left;
+
+        const maxOpacity = 1;
+        const minOpacity = 0; 
+
+        const distanceToSliderEdge = Math.max(0, sliderPosition);
+
+        const containerWidth = containerRect.width;
+
+        const opacityValue = Math.max(minOpacity, Math.min(maxOpacity, distanceToSliderEdge / (containerWidth - sliderWidth)));
+
+        pictureExploreImage.style.opacity = opacityValue;
     });
 
     document.addEventListener('mouseup', () => {

@@ -49,6 +49,8 @@
 .pictureExploreImage img{
     width: 720px;
     height: 700px;
+
+    transition: opacity 0.3s ease;
 }
 
 .pictureExploreTitle {
