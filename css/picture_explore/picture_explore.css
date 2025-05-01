@@ -93,13 +93,13 @@
     flex-direction: column;
 
     position: absolute;
-    left: 50%;
+    left: 90%;
 
     z-index: 10;
 }
 
 .sliderStripeOne {
-    width: 10px;
+    width: 5px;
     height: 330px;
 
     background-color: #fff;
@@ -109,7 +109,7 @@
 }
 
 .sliderStripeTwo {
-    width: 10px;
+    width: 5px;
     height: 330px;
 
     background-color: #fff;
@@ -129,7 +129,7 @@
     position: absolute;
     background: inherit;
 
-    border: 10px solid #fff;
+    border: 5px solid #fff;
 }
 
 .sliderContainer:hover {

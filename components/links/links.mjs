@@ -16,3 +16,10 @@ export const instagramLink = 'https://www.instagram.com/museelouvre/';
 export const facebookLink = 'https://www.facebook.com/museedulouvre';
 export const twitterLink = 'http://twitter.com/museelouvre';
 export const pinterestLink = 'https://www.pinterest.fr/museedulouvre/';
+
+/// Video Section Liks
+
+export const linkOne = 'https://www.youtube.com/embed/zp1BXPX8jcU';
+export const linkThree = 'https://www.youtube.com/embed/NOhDysLnTvY';
+export const linkFour = 'https://www.youtube.com/embed/aWmJ5DgyWPI';
+export const linkFive = 'https://www.youtube.com/embed/2OR0OCr6uRE';
