@@ -61,10 +61,10 @@ export function createBuyTicketsSection() {
     totalSum.textContent = `Total €${result}`;
 
     minusButton.addEventListener('click', () => {
-        if (inputCount >= 0) {
-            inputCount.value--;
-        } else {
-            return;
+        let currentValue = parseInt(inputCount.value) || 0;
+        if (currentValue > 0) {
+            currentValue--;
+            inputCount.value = currentValue;
         }
     });
 
@@ -73,10 +73,10 @@ export function createBuyTicketsSection() {
     });
 
     seniorMinusButton.addEventListener('click', () => {
-        if (seniorInputCount >= 0) {
-            seniorInputCount.value--;
-        } else {
-            return;
+        let currentValue = parseInt(seniorInputCount.value) || 0;
+        if (currentValue > 0) {
+            currentValue--;
+            seniorInputCount.value = currentValue;
         }
     });
 
