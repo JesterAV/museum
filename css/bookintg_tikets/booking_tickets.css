@@ -1,0 +1,57 @@
+.bookingSection {
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 40px;
+
+    background-color: #fff;
+}
+
+.bookingContainerOne {
+    width: 400px;
+    height: 663px;
+}
+
+.bookingContainerTwo {
+    width: 530px;
+    height: 663px;
+
+    border: 1px solid #030303;
+}
+
+.markButtonContainer {
+    width: 20px;
+    height: 25px;
+
+    position: absolute;
+
+    top: 30px;
+    right: 30px;
+}
+
+.markLineOne,
+.markLineTwo {
+    content: "";
+
+    width: 25px;
+    border: 1px solid #181C29;
+
+    position: absolute;
+    left: 5px;
+}
+
+.menu_line_one {
+    top: 25px;
+    transform: translateY(4px) rotate(45deg);
+}
+
+.menu_line_two {
+    bottom: 25px;
+    transform: translateY(-4px) rotate(-45deg);
+}
