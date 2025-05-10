@@ -50,3 +50,42 @@ export function shuffleArray(array) {
 
     return array;
 }
+
+export function createCalendar(parent) {
+    const dateIconContainer = createElement('div', 'dateIconContainer', parent);
+    const dateIconFirst = createElement('img', 'dateIcon', dateIconContainer);
+    const dateIconSecond = createElement('img', 'dateIcon', dateIconContainer);
+
+    dateIconFirst.src = '/museum/assets/images/png/bookingTickets/date.png';
+    dateIconSecond.src = '/museum/assets/images/png/bookingTickets/date-1.png';
+    dateIconSecond.classList.add('secondIcon');
+
+    const dateInput = createElement('input', 'dateFormInput', parent);
+    dateInput.placeholder = 'Date';
+    dateInput.setAttribute('required', '');
+    dateInput.type = 'date';
+    dateInput.setAttribute('name', 'dateInput');
+
+    const dateBtn = createElement('button', 'formBtn', parent);
+
+    dateBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        dateInput.showPicker();
+    });
+
+}
+
+export function createTimeForm(parent) {
+    const timeIcon = createElement('img', 'timeIcon', parent);
+    timeIcon.src = '/museum/assets/images/png/bookingTickets/time.png';
+
+    const timeInput = createElement('input', 'timeFormInput', parent);
+    timeInput.type = 'time';
+
+    const timeBtn = createElement('button', 'formBtn', parent);
+
+    timeBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        timeInput.showPicker();
+    });
+}

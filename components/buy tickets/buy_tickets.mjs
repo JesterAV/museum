@@ -9,6 +9,11 @@ export function createBuyTicketsSection() {
     const ticketsTitle = createElement('span', 'ticketsTitle', ticketsTitleContainer).textContent = 'Buy tickets';
     const ticketsContainers = createElement('div', 'ticketsContainers', ticketsSectionContainer);
     const ticketsContainerImage = createElement('img', 'ticketsContainerImage', ticketsContainers);
+
+    ticketsContainerImage.addEventListener('click', () => {
+        window.open('./booking.html');
+    })
+
     ticketsContainerImage.src = '/museum/assets/images/png/buySectionPhoto.png'; 
     const buyMenu = createElement('div', 'buyMenu', ticketsContainers);
 
