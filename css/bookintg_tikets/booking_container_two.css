@@ -1,0 +1,166 @@
+@import url(./cardForm.css);
+
+.bookingContainerTwo {
+    width: 530px;
+    height: 663px;
+    box-sizing: border-box;
+
+    border: 1px solid #030303;
+
+    padding: 25px 30px 26px 30px;
+    gap: 22px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.bookingInformationContainer {
+    width: 470px;
+    height: 151px;
+
+    display: flex;
+    flex-direction: column;
+    
+    gap: 10px;
+
+    position: relative;
+}
+
+.titleAndSubtitleContainerTwo {
+    width: 141px;
+    height: 66px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.bookingImage {
+    width: 150px;
+    height: 120px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.titleContainerTwo {
+    font-size: 32px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    line-height: 38px;
+
+    color: #272727;
+}
+
+.subtitleContainerTwo {
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Roboto';
+    line-height: 26px;
+
+    color: #740C11;
+}
+
+.informationParagraph {
+    width: 196px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.totalSumContainer {
+    width: 470px;
+    height: 117px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.tarifLine {
+    width: 100%;
+    height: 27px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tarifNameContainer {
+    width: 300px;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.guestCountContainer {
+    width: 32px;
+    height: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #030303;
+    border-radius: 30%;
+}
+
+.guestCount {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Roboto';
+
+    color: #A4A4A3;
+}
+
+.tarifName {
+    font-size: 22px;
+    font-weight: 400;
+    font-family: 'Roboto';
+
+    color: #030303;
+}
+
+.totalLine {
+    width: 100%;
+    border: 2px solid #740C11;
+
+    margin-top: 4px;
+}
+
+.totalContainer {
+    width: 100%;
+    height: 38px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 5px;
+}
+
+.total,
+.totalSum {
+    font-family: 'Roboto';
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.totalSum {
+    font-weight: 500;
+}
+
+.cardFormContainer {
+    width: 100%;
+    height: 241px;
+
+    position: relative;
+}

@@ -6,6 +6,13 @@ export function createElement(tag, className, parent) {
     return newElement;
 }
 
+export function cloneElement(copyElement, parent) {
+    const cloneElement = copyElement.cloneNode(true);
+    parent.appendChild(cloneElement);
+
+    return cloneElement;
+}
+
 export function createMap(api) {
     mapboxgl.accessToken = api;
 
@@ -61,10 +68,19 @@ export function createCalendar(parent) {
     dateIconSecond.classList.add('secondIcon');
 
     const dateInput = createElement('input', 'dateFormInput', parent);
-    dateInput.placeholder = 'Date';
     dateInput.setAttribute('required', '');
     dateInput.type = 'date';
     dateInput.setAttribute('name', 'dateInput');
+
+    const today = new Date();
+
+    const dd = String(today.getDate()).padStart(2, '0');
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const yyyy = today.getFullYear();
+
+    const formattedDate = `${yyyy}-${mm}-${dd}`;
+
+    dateInput.setAttribute('min', formattedDate);
 
     const dateBtn = createElement('button', 'formBtn', parent);
 
@@ -79,8 +95,26 @@ export function createTimeForm(parent) {
     const timeIcon = createElement('img', 'timeIcon', parent);
     timeIcon.src = '/museum/assets/images/png/bookingTickets/time.png';
 
-    const timeInput = createElement('input', 'timeFormInput', parent);
-    timeInput.type = 'time';
+    const timeInput = createElement('select', 'timeFormInput', parent);
+    timeInput.setAttribute('required', '');
+    timeInput.setAttribute('name', 'timeInput');
+
+    function generateTimeOptions() {
+        const startTime = 9 * 60;
+        const endTime = 18 * 60;
+
+        for (let time = startTime; time <= endTime; time += 30) {
+            const hours = String(Math.floor(time / 60)).padStart(2, '0');
+            const minutes = String(time % 60).padStart(2, '0');
+            const optionValue = `${hours}:${minutes}`;
+
+            const optionTime = createElement('option', 'optionTime', timeInput);
+            optionTime.value = optionValue;
+            optionTime.textContent = optionValue;
+        }
+    }
+
+    generateTimeOptions();
 
     const timeBtn = createElement('button', 'formBtn', parent);
 
