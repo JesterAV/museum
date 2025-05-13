@@ -58,7 +58,7 @@ export function shuffleArray(array) {
     return array;
 }
 
-export function createCalendar(parent) {
+export function createCalendar(parent, replaceElement) {
     const dateIconContainer = createElement('div', 'dateIconContainer', parent);
     const dateIconFirst = createElement('img', 'dateIcon', dateIconContainer);
     const dateIconSecond = createElement('img', 'dateIcon', dateIconContainer);
@@ -89,9 +89,26 @@ export function createCalendar(parent) {
         dateInput.showPicker();
     });
 
+    dateInput.addEventListener('change', function() {
+        const selectedDate = new Date(this.value);
+
+        const dayOfWeekList = ['Sunday', 'Monday', 'Tuesday', 'Wednesday',
+            'Thursday', 'Friday', 'Saturday'
+        ];
+
+        const monthsList = ['January', 'February', 'March', 'April', 'May', 'June', 
+            'July', 'August', 'September', 'October', 'November', 'December'
+        ];
+
+        const day = dayOfWeekList[selectedDate.getDay()];
+        const month = monthsList[selectedDate.getMonth()];
+
+        replaceElement.textContent = `${day}, ${month} ${selectedDate.getDate()}`;
+    });
+
 }
 
-export function createTimeForm(parent) {
+export function createTimeForm(parent, replaceItem) {
     const timeIcon = createElement('img', 'timeIcon', parent);
     timeIcon.src = '/museum/assets/images/png/bookingTickets/time.png';
 
@@ -111,10 +128,16 @@ export function createTimeForm(parent) {
             const optionTime = createElement('option', 'optionTime', timeInput);
             optionTime.value = optionValue;
             optionTime.textContent = optionValue;
+
         }
     }
 
     generateTimeOptions();
+
+    timeInput.addEventListener('change', function() {
+        const selectedOption = this.value;
+        replaceItem.textContent = `${selectedOption}`;
+    });
 
     const timeBtn = createElement('button', 'formBtn', parent);
 

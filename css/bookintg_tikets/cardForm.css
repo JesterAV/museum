@@ -70,7 +70,8 @@
 
     font-size: 12px;
     font-family: 'Roboto';
-    font-weight: 400;
+    font-weight: 500;
+    letter-spacing: 0.7px;
 }
 
 .sectionName {
@@ -91,7 +92,8 @@
 
     font-size: 12px;
     font-family: 'Roboto';
-    font-weight: 400;
+    font-weight: 500;
+    letter-spacing: 0.7px;
 }
 
 .dateContainer {
@@ -118,7 +120,8 @@
 
     font-size: 12px;
     font-family: 'Roboto';
-    font-weight: 400;
+    font-weight: 500;
+    letter-spacing: 0.7px;
 }
 
 .payLine {
@@ -145,6 +148,7 @@
     font-size: 12px;
     font-family: 'Roboto';
     font-weight: 500;
+    letter-spacing: 0.7px;
 }
 
 .descriptionCode {

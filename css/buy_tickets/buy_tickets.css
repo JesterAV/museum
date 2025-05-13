@@ -81,6 +81,8 @@
     font-size: 22px;
     font-family: 'Roboto';
     font-weight: 300;
+
+    transition: 0.5s ease;
 }
 
 .amountContainer {
@@ -156,20 +158,23 @@
 
 .typeListParagraph {
     content: '○';
+    transition: 0.5s ease;
 }
 
 .typeListParagraph::before {
     content: '○';
-    transition: 0.3 ease;
+    transition: 0.5s ease;
 }
 
 .typeListParagraph:hover::before {
     content: '◉';
     cursor: pointer;
+    transition: 0.5s ease;
 }
 
 .typeListParagraph.active::before {
     content: '◉';
+    transition: 0.5s ease;
 }
 
 .typeName {
@@ -177,5 +182,24 @@
 }
 
 .typeName:hover {
+    cursor: pointer;
+}
+
+.byBtn {
+    width: 175px;
+    height: 50px;
+
+    background-color: #000;
+    margin-top: 40px;
+
+    color: #fff;
+
+    font-family: 'Roboto';
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.byBtn:hover {
     cursor: pointer;
 }

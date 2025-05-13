@@ -38,7 +38,7 @@ export function createCardForm(parent) {
     
 
     const cardYearInput = createElement('input', 'cardDateInput', yearContainer);
-    cardYearInput.setAttribute('type', 'number');    
+    cardYearInput.setAttribute('type', 'text');    
     cardYearInput.setAttribute('required', '');
     cardYearInput.setAttribute('maxlength', '4');
 
@@ -59,8 +59,9 @@ export function createCardForm(parent) {
     const secureCode = createElement('span', 'secureCode', codeInputContainer).textContent = 'CVC/CVV';
 
     const codeInput = createElement('input', 'codeInput', codeInputContainer);
-    codeInput.setAttribute('type', 'number');
+    codeInput.setAttribute('type', 'text');
     codeInput.setAttribute('require', '');
+    codeInput.setAttribute('maxlength', '4');
 
     const descriptionCode = createElement('span', 'descriptionCode', codeInputContainer);
     descriptionCode.innerHTML = 'The last <br>3 or 4 digits <br>on back <br>of the card';

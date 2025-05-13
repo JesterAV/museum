@@ -1,5 +1,6 @@
 import { createElement, createCalendar, createTimeForm, cloneElement } from "../utils/utils.mjs";
 import { createCardForm } from "./createCardForm.mjs";
+import { BASICPERMANENTEXHIBITION, BASICTEMPORARYEXHIBITION, BASICCOMBINEDADMISSION} from "../constants/ticketCoasts.mjs";
 
 export function createBookingTickets() {
     const bookingSection = createElement('div', 'bookingSection', document.body);
@@ -23,9 +24,7 @@ export function createBookingTickets() {
 
     const dateAndTimeFormContainer = createElement('div', 'dateAndTimeFormContainer', formsAndEntryTicketsContainer);
     const dateForm = createElement('form', 'dateAndTimeForm', dateAndTimeFormContainer);
-    createCalendar(dateForm);
     const timeForm = createElement('form', 'dateAndTimeForm', dateAndTimeFormContainer);
-    createTimeForm(timeForm);
 
     const nameForm = createElement('form', 'bookingForm', formsAndEntryTicketsContainer);
     const nameFormIcon = createElement('img', 'nameFormIcon', nameForm);
@@ -73,7 +72,6 @@ export function createBookingTickets() {
     for (let i = 0; i < typesList.length; i++) {
         const typeForTicketForm = createElement('option', 'typeForTicketForm', selectMenu);
         typeForTicketForm.textContent = typesList[i];
-        typeForTicketForm.value = i + 1;
     }
 
     const typeBtn = createElement('button', 'formBtn', ticketTypeForm);
@@ -85,6 +83,32 @@ export function createBookingTickets() {
     const entryTicketsContainer = createElement('div', 'entryTicketsContainer', formsAndEntryTicketsContainer);
     const entryTicketsTitleContainer = createElement('div', 'entryTicketsTitleContainer', entryTicketsContainer);
     const entryTicketsTitle = createElement('span', 'entryTicketsTitle', entryTicketsTitleContainer).textContent = 'Entry ticket';
+
+    const counterTarifLine = createElement('div', 'counterTarifLine', entryTicketsContainer);
+    const clone_CounterTarifLine = cloneElement(counterTarifLine, entryTicketsContainer);
+
+    const counterTarifName = createElement('span', 'counterTarifName', counterTarifLine);
+    const clone_counterTarifName = cloneElement(counterTarifName, clone_CounterTarifLine);
+    counterTarifName.textContent = `Basic 18+ (${null} €)`;
+    clone_counterTarifName.textContent = `Senior 65+ (${null} €)`;
+
+    const counterContainer = createElement('div', 'counterContainer', counterTarifLine);
+    const clone_counterContainer = cloneElement(counterContainer, clone_CounterTarifLine);
+
+    const minusButton = createElement('button', 'bookingCounterButton', counterContainer);
+    const clone_minusButton = cloneElement(minusButton, clone_counterContainer);
+    minusButton.textContent = '-';
+    clone_minusButton.textContent = '-';
+
+    const counterInput = createElement('div', 'bookingCounterInput', counterContainer);
+    const clone_counterInput = cloneElement(counterInput, clone_counterContainer);
+    counterInput.setAttribute('type', 'number');
+    clone_counterInput.setAttribute('type', 'number');
+
+    const plusButton = createElement('button', 'bookingCounterButton', counterContainer);
+    const clone_plusButton = cloneElement(plusButton, clone_counterContainer);
+    plusButton.textContent = '+';
+    clone_plusButton.textContent = '+';
 
     const bookingInformationContainer = createElement('div', 'bookingInformationContainer', bookingContainerTwo);
     const titleAndSubtitleContainerTwo = createElement('div', 'titleAndSubtitleContainerTwo', bookingInformationContainer);
@@ -131,6 +155,18 @@ export function createBookingTickets() {
         paragrapghInformation.id = paragrapghsID[i];
     }
 
+    const resultDay = document.getElementById('date');
+    createCalendar(dateForm, resultDay);
+    const resultTime = document.getElementById('time');
+    createTimeForm(timeForm, resultTime);
+    const resultType = document.getElementById('type');
+
+    selectMenu.addEventListener('change', function() {
+        const selectedParagraph = this.value;
+        resultType.textContent = selectedParagraph;
+    })
+
+
     const bookingImage = createElement('img', 'bookingImage', bookingInformationContainer);
     bookingImage.src = '/museum/assets/images/png/bookingTickets/bookingImage.png';
 
@@ -169,4 +205,8 @@ export function createBookingTickets() {
 
     const cardFormContainer = createElement('div', 'cardFormContainer', bookingContainerTwo);
     createCardForm(cardFormContainer);
+
+    window.addEventListener('load', () => {
+        totalSum.textContent = `${sessionStorage.getItem('totalSum')} €`;
+    });
 }

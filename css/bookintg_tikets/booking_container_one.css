@@ -90,6 +90,7 @@
 .bookingForm {
     width: 100%;
     height: 45px;
+    box-sizing: border-box;
 
     border: 1px solid #030303;
 
@@ -101,8 +102,13 @@
 }
 
 .entryTicketsContainer {
-    width: 400px;
+    width: 100%;
     height: 135px;
+    box-sizing: border-box;
+
+    padding: 10px 15px 15px 15px;
+
+    border: 1px solid #030303;
 }
 
 .entryTicketsTitleContainer {
@@ -228,4 +234,61 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     font-weight: 400;
 
     letter-spacing: 0.5px;
+}
+
+.counterTarifLine {
+    width: 370px;
+    height: 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 18px;
+}
+
+.counterTarifName {
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 400;
+
+    color: #030303;
+}
+
+.counterContainer {
+    width: 105px;
+    height: 25px;
+
+    border: 1px solid #030303;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bookingCounterButton {
+    width: 35px;
+    height: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #030303;
+    color: #ffffff;
+}
+
+.bookingCounterInput {
+    width: 35px;
+    height: 25px;
+
+    text-align: center;
+
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.bookingCounterButton:hover {
+    cursor: pointer;
 }
